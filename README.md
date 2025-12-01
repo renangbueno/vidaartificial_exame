@@ -1,13 +1,51 @@
-Modelo,Tamanho,Threads,Iterações,Clientes,Tempo 1,Tempo 2,Tempo 3,Média
-Sequencial,500×500,–,30,–,11.377,11.572,11.624,11.524
-Sequencial,2000×2000,–,20,–,131.407,132.832,132.344,132.194
-Paralelo,500×500,1,30,–,11.335,11.878,11.843,11.685
-Paralelo,500×500,2,30,–,11.793,11.873,12.619,12.095
-Paralelo,500×500,4,30,–,11.754,12.722,12.644,12.373
-Paralelo,500×500,8,30,–,12.426,11.414,11.201,11.680
-Paralelo,2000×2000,1,20,–,137.935,137.779,137.526,137.747
-Paralelo,2000×2000,2,20,–,135.381,135.148,134.701,135.077
-Paralelo,2000×2000,4,20,–,138.337,138.317,138.144,138.266
-Paralelo,2000×2000,8,20,–,134.842,133.671,133.612,134.042
-Distribuído,500×500,–,30,2,4.757,5.011,5.023,4.930
-Distribuído,2000×2000,–,20,2,98.535,97.974,99.551,98.687
+# Jogo da Vida de Conway – Programação Paralela e Distribuída
+
+**Disciplina**: Sistemas Distribuídos ES45A.2025_02.ES51
+**Aluno**: Renan Gabriel Bueno RA: 2454254
+
+Implementação completa das três versões exigidas usando apenas **Python padrão**.
+
+---
+
+## 🌟 Versões Entregues
+
+* **Sequencial**: Implementação usando listas simples.
+* **Paralela**: Implementação com **`threading`** (de 1 a 8 *threads*).
+* **Distribuída**: Implementação com **sockets TCP** (1 servidor + N clientes, usando o padrão *halo exchange* para comunicação de fronteira). 
+
+---
+
+## 🚀 Como Executar
+
+### Sequencial + Paralelo
+
+Para rodar as versões sequenciais, paralelas e gerar os gráficos de desempenho:
+
+```bash
+python jogo_da_vida.py
+```
+
+### Distribuída (3 terminais)
+Para executar a versão distribuída, use três terminais separados:
+
+```bash
+# Terminal 1: Servidor
+python jogo_da_vida.py servidor
+```
+
+```bash
+# Terminal 2 e 3: Clientes (abrir em terminais separados)
+python jogo_da_vida.py cliente
+```
+
+## 📊 Resultados Obtidos
+Máquina de Teste: Intel® Core™ i5-10500T @ 2.30 GHz • 8 GB RAM • Windows 11 Pro • Python 3.12
+
+O modelo distribuído foi o único que apresentou ganho real de desempenho porque utiliza processos separados (clientes/servidor), escapando assim do GIL (Global Interpreter Lock) do Python.
+
+## 📚 Fontes Consultadas
+*Documentação oficial Python
+*Wikipedia – Conway’s Game of Life
+*Real Python / Stack Overflow
+*Materiais USP e PUC (halo exchange)
+*Grok (xAI) e ChatGPT – depuração e explicação do GIL
