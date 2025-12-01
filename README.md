@@ -41,6 +41,8 @@ python jogo_da_vida.py cliente
 ## 📊 Resultados Obtidos
 Máquina de Teste: Intel® Core™ i5-10500T @ 2.30 GHz • 8 GB RAM • Windows 11 Pro • Python 3.12
 
+![Simulação do Jogo da Vida](https://github.com/renangbueno/vidaartificial_exame/blob/main/demonstracao.gif)
+
 O modelo distribuído foi o único que apresentou ganho real de desempenho porque utiliza processos separados (clientes/servidor), escapando assim do GIL (Global Interpreter Lock) do Python.
 
 ## 📚 Fontes Consultadas
