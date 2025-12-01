@@ -1,7 +1,7 @@
 # Jogo da Vida de Conway – Programação Paralela e Distribuída
 
-**Disciplina**: Sistemas Distribuídos ES45A.2025_02.ES51
-**Aluno**: Renan Gabriel Bueno RA: 2454254
+**Disciplina**: Sistemas Distribuídos ES45A.2025_02.ES51  
+**Aluno**: Renan Gabriel Bueno RA: 2454254  
 
 Implementação completa das três versões exigidas usando apenas **Python padrão**.
 
@@ -44,8 +44,8 @@ Máquina de Teste: Intel® Core™ i5-10500T @ 2.30 GHz • 8 GB RAM • Windows
 O modelo distribuído foi o único que apresentou ganho real de desempenho porque utiliza processos separados (clientes/servidor), escapando assim do GIL (Global Interpreter Lock) do Python.
 
 ## 📚 Fontes Consultadas
-*Documentação oficial Python
-*Wikipedia – Conway’s Game of Life
-*Real Python / Stack Overflow
-*Materiais USP e PUC (halo exchange)
-*Grok (xAI) e ChatGPT – depuração e explicação do GIL
+* Documentação oficial Python
+* Wikipedia – Conway’s Game of Life
+* Real Python / Stack Overflow
+* Materiais USP e PUC (halo exchange)
+* Grok (xAI) e ChatGPT – depuração e explicação do GIL
